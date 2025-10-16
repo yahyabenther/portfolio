@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Yahya Ben Taher</h1>
+            <p class="subtitle">Développeur Web Full Stack</p>
+            <nav class="nav">
+                <a href="#about">À propos</a>
+                <a href="#skills">Compétences</a>
+                <a href="#projects">Projets</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="profile-img">👨‍💻</div>
+                <div class="about-text">
+                    <p>Bonjour ! Je m'appelle Yahya Ben Taher et je suis un développeur passionné par la création d'applications web modernes et performantes. Avec plusieurs années d'expérience dans le domaine, je maîtrise les technologies front-end et back-end.</p>
+                    <p style="margin-top: 1rem;">Mon objectif est de créer des expériences utilisateur exceptionnelles tout en écrivant un code propre et maintenable. J'aime relever de nouveaux défis et apprendre constamment de nouvelles technologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>💻 Front-end</h3>
+                    <p>HTML5, CSS3, JavaScript,angular, Tailwind CSS</p>
+                </div>
+                <div class="skill-card">
+                    <h3>⚙️ Back-end</h3>
+                    <p>Node.js, PHP</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🗄️ Base de données</h3>
+                    <p>MySQL, PostgreSQL</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🛠️ Outils</h3>
+                    <p>Git, Docker, VS Code, Postman</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Application E-commerce</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Application web complète de gestion de produits avec fonctionnalités CRUD, recherche avancée, gestion des catégories et système d'authentification. Interface utilisateur moderne et responsive avec navigation intuitive.</p>
+                        <p style="margin-top: 1rem;"><strong>Technologies:</strong> Angular, .NET Core, PostgreSQL</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Dashboard Analytique</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Interface de visualisation de données en temps réel avec graphiques interactifs et rapports personnalisables.</p>
+                        <p style="margin-top: 1rem;"><strong>Technologies:</strong> Vue.js, Python, PostgreSQL</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Application Mobile</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Application de gestion de tâches avec synchronisation cloud et notifications push.</p>
+                        <p style="margin-top: 1rem;"><strong>Technologies:</strong> React Native, Firebase</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Envoyer le message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Votre Nom. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#" title="GitHub">🔗</a>
+                <a href="#" title="LinkedIn">💼</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="Email">📧</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message ! Je vous répondrai bientôt.');
+            this.reset();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
